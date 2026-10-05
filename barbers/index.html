@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IUL for Barbers</title>
+  <style>
+    :root {
+      --bg: #090a0c;
+      --card: #14161b;
+      --line: #2a2e36;
+      --text: #f6f3ec;
+      --muted: #c4bfb4;
+      --gold: #e4c27a;
+      --gold-2: #f3ddb0;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(1200px 600px at 50% -10%, #1c1812 0%, transparent 55%),
+        var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      line-height: 1.45;
+    }
+    .wrap {
+      width: min(440px, 100%);
+      margin: 0 auto;
+      padding: 28px 20px 72px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      color: var(--gold);
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+      font-size: clamp(2.4rem, 10vw, 3.15rem);
+      line-height: 0.95;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+    .lead {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+    .hero {
+      background: #000;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+    }
+    video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      background: #000;
+      object-fit: contain;
+    }
+    ul {
+      list-style: none;
+      margin: 22px 0 8px;
+      padding: 0;
+    }
+    li {
+      position: relative;
+      margin: 0 0 12px;
+      padding: 16px 16px 16px 18px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--gold);
+      border-radius: 12px;
+      font-size: 1.02rem;
+    }
+    .catch {
+      margin: 8px 0 26px;
+      padding: 18px 16px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #1b1813, #121318);
+      border: 1px solid #3d3424;
+    }
+    .catch p { margin: 0; }
+    .catch .q {
+      color: var(--gold-2);
+      font-family: Georgia, "Iowan Old Style", Palatino, serif;
+      font-size: 1.35rem;
+      margin-bottom: 4px;
+    }
+    .catch .a {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+    form {
+      display: grid;
+      gap: 12px;
+      padding: 18px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+    label {
+      display: grid;
+      gap: 6px;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    input {
+      width: 100%;
+      border: 1px solid #3a3f49;
+      background: #0c0d10;
+      color: var(--text);
+      border-radius: 10px;
+      padding: 14px 12px;
+      font-size: 1.05rem;
+      font-family: inherit;
+    }
+    input:focus {
+      outline: 2px solid var(--gold);
+      outline-offset: 1px;
+      border-color: transparent;
+    }
+    button {
+      margin-top: 4px;
+      border: 0;
+      border-radius: 999px;
+      padding: 16px 18px;
+      background: var(--gold);
+      color: #1a1408;
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    button:hover { background: var(--gold-2); }
+    button:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 3px;
+    }
+    .thanks {
+      display: none;
+      margin: 0;
+      padding: 14px 12px;
+      border-radius: 10px;
+      background: #102117;
+      color: #d8f5e4;
+      border: 1px solid #1f5a38;
+      font-weight: 650;
+      font-size: 1rem;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .thanks.show { display: block; }
+    .thanks.error {
+      background: #2a1212;
+      color: #f5d8d8;
+      border-color: #6a2626;
+    }
+    .thanks a { color: inherit; }
+    .mark {
+      margin: 36px 0 0;
+      text-align: center;
+      font-weight: 800;
+      letter-spacing: 0.28em;
+      font-size: 0.78rem;
+      color: rgba(228, 194, 122, 0.38);
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="eyebrow">Indexed universal life</p>
+    <h1>IUL for Barbers</h1>
+    <p class="lead">A short look at cash value, living benefits, and a way to prepare for retirement.</p>
+    <div class="hero">
+      <video src="video.mp4" controls playsinline preload="metadata" poster="">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <ul>
+        <li>Need a shop chair? Borrow against the policy and the cash value stays. About $42,000 stays if you take about $20,000.</li>
+        <li>Living benefits: access up to 90 percent of the policy for everyday bills if a critical, chronic, or terminal illness hits.</li>
+        <li>It is life insurance, and a way to prepare for retirement.</li>
+        <li>Contact IUL for Barbers for a free quote.</li>
+    </ul>
+    <section class="catch" aria-label="What's the catch">
+      <p class="q">What's the catch?</p>
+      <p class="a">There is no catch.</p>
+    </section>
+    <form id="quote" action="https://formsubmit.co/d9f6c9a2a6f182733b15ae490ac27c50" method="POST">
+      <input type="hidden" name="_subject" value="New IUL for Barbers lead">
+      <input type="hidden" name="page" value="barbers">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://danielawosanya-jpg.github.io/iul-pages/barbers/?sent=1">
+      <label>Name
+        <input name="name" type="text" autocomplete="name" required>
+      </label>
+      <label>Phone
+        <input name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+      </label>
+      <label>Email
+        <input name="email" type="email" autocomplete="email" required>
+      </label>
+      <button type="submit">Request a free quote</button>
+      <p class="thanks" id="thanks" role="status">Thank you. We have your request for a free quote.</p>
+    </form>
+    <p class="mark">IUL FOR BARBERS</p>
+  </main>
+  <script>
+    (function () {
+      var note = document.getElementById("thanks");
+      if (location.search.indexOf("sent=1") !== -1) {
+        note.classList.add("show");
+        if (window.history && history.replaceState) {
+          history.replaceState(null, "", location.pathname);
+        }
+      }
+      var form = document.getElementById("quote");
+      form.addEventListener("submit", function () {
+        var button = form.querySelector("button[type=submit]");
+        button.disabled = true;
+        button.textContent = "Sending...";
+      });
+    })();
+  </script>
+</body>
+</html>
