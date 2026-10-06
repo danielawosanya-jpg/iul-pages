@@ -80,23 +80,12 @@
       border-radius: 12px;
       font-size: 1.02rem;
     }
-    .catch {
-      margin: 8px 0 26px;
-      padding: 18px 16px;
-      border-radius: 12px;
-      background: linear-gradient(180deg, #1b1813, #121318);
-      border: 1px solid #3d3424;
-    }
-    .catch p { margin: 0; }
-    .catch .q {
-      color: var(--gold-2);
-      font-family: Georgia, "Iowan Old Style", Palatino, serif;
-      font-size: 1.35rem;
-      margin-bottom: 4px;
-    }
-    .catch .a {
-      font-size: 1.15rem;
-      font-weight: 700;
+    .example-note {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-style: italic;
     }
     form {
       display: grid;
@@ -167,6 +156,32 @@
       border-color: #6a2626;
     }
     .thanks a { color: inherit; }
+    label.consent {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      align-items: start;
+      gap: 10px;
+      font-size: 0.8rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--muted);
+    }
+    label.consent input {
+      width: 20px;
+      height: 20px;
+      margin: 2px 0 0;
+      padding: 0;
+      accent-color: var(--gold);
+    }
+    .consent a, .disclosure a { color: var(--gold-2); }
+    .disclosure {
+      margin: 22px 0 0;
+      font-size: 0.78rem;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+    .disclosure p { margin: 0 0 8px; }
     .mark {
       margin: 36px 0 0;
       text-align: center;
@@ -189,21 +204,18 @@
       </video>
     </div>
     <ul>
-        <li>Need a shop chair? Borrow against the policy and the cash value stays. About $42,000 stays if you take about $20,000.</li>
-        <li>Living benefits: access up to 90 percent of the policy for everyday bills if a critical, chronic, or terminal illness hits.</li>
-        <li>It is life insurance, and a way to prepare for retirement.</li>
+        <li>Need a shop chair? You may be able to borrow against the policy's cash value. About $42,000 stays if you take about $20,000. <span class="example-note">Hypothetical example for illustration only; not a projection.</span></li>
+        <li>Living benefits: some policies may let you access part of the death benefit early if a qualifying critical, chronic, or terminal illness occurs. Availability and amounts vary by carrier.</li>
+        <li>It is life insurance first, and its cash value may be one part of preparing for retirement.</li>
         <li>Contact IUL for Barbers for a free quote.</li>
     </ul>
-    <section class="catch" aria-label="What's the catch">
-      <p class="q">What's the catch?</p>
-      <p class="a">There is no catch.</p>
-    </section>
     <form id="quote" action="https://formsubmit.co/d9f6c9a2a6f182733b15ae490ac27c50" method="POST">
       <input type="hidden" name="_subject" value="New IUL for Barbers lead">
       <input type="hidden" name="page" value="barbers">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://danielawosanya-jpg.github.io/iul-pages/barbers/?sent=1">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <label>Name
         <input name="name" type="text" autocomplete="name" required>
       </label>
@@ -213,9 +225,17 @@
       <label>Email
         <input name="email" type="email" autocomplete="email" required>
       </label>
+      <label class="consent">
+        <input type="checkbox" name="consent" value="yes" required>
+        <span>By checking this box and submitting, I agree that Daniel Awosanya, a licensed insurance agent with Pinpoint Enterprises LLC, may contact me about life insurance at the phone number and email I provided, including by call or text, which may use automated technology. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out. See our <a href="../privacy/">Privacy Policy</a>.</span>
+      </label>
       <button type="submit">Request a free quote</button>
       <p class="thanks" id="thanks" role="status">Thank you. We have your request for a free quote.</p>
     </form>
+    <footer class="disclosure">
+      <p>Daniel Awosanya · Licensed Life Insurance Agent · Pinpoint Enterprises LLC. This page is for educational purposes and is not a government or lender program. Policy features, cash value, loans and living benefits vary by carrier, product and eligibility; policy loans accrue interest and reduce the death benefit. No growth is guaranteed.</p>
+      <p><a href="../privacy/">Privacy Policy</a></p>
+    </footer>
     <p class="mark">IUL FOR BARBERS</p>
   </main>
   <script>
